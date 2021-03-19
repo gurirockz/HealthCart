@@ -21,40 +21,40 @@ export default StyleSheet.create({
     fontFamily: fontFamily.medium,
     marginTop: moderateScaleVertical(15),
   },
-  socialRow:{
+  socialRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  margin:{
-height: 2,
-backgroundColor: colors.textBlue,
-marginLeft: 80,
-marginRight: 80,
-marginTop: 8
+  margin: {
+    height: 2,
+    backgroundColor: colors.textBlue,
+    marginLeft: 80,
+    marginRight: 80,
+    marginTop: 8,
   },
-  socialRowBtn:{
+  socialRowBtn: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: moderateScaleVertical(40),
   },
-  hyphen:{
+  hyphen: {
     width: 20,
     height: 1,
     backgroundColor: colors.textGrey,
     opacity: 0.6,
   },
-  bottomContainer:{
+  bottomContainer: {
     flex: 1,
     justifyContent: 'flex-end',
     marginBottom: moderateScaleVertical(30),
   },
-  guestBtn:{
+  guestBtn: {
     marginTop: moderateScaleVertical(20),
     backgroundColor: colors.white,
     borderWidth: 0,
   },
-  orText:{
+  orText: {
     ...commonStyles.mediumFont14,
     lineHeight: 24,
     textAlign: 'center',
@@ -63,17 +63,17 @@ marginTop: 8
     marginTop: 0,
     marginHorizontal: moderateScale(16),
   },
-  myText:{
-color: colors.black,
-fontSize: 20,
-fontWeight: 'bold',
+  myText: {
+    color: colors.black,
+    fontSize: 20,
+    fontWeight: 'bold',
   },
-  alreadyText:{
+  alreadyText: {
     color: colors.textGreyLight,
     marginTop: 0,
   },
-  login:{
+  login: {
     color: colors.themeColor,
     fontFamily: fontFamily.futuraBtHeavy,
-  }
+  },
 });

@@ -1,7 +1,7 @@
 export default {
   themeColor: '#3D90EE',
-  btnABlue: '#306F94',
-  btnBBlue: '#32A3E0',
+  btnABlue: '#1E88FD',
+  btnBBlue: '#1E88FD',
   textBlue:"#1A76CA",
   white: '#FFFFFF',
   black:"#000000",

@@ -24,6 +24,11 @@ import imagePath from '../../constants/imagePath';
 import navigationStrings from '../../constants/navigationStrings';
 const CELL_COUNT = 4;
 export default function OtpVerification({navigation}) {
+
+  const moveToNewScreen = (screenName, data = {}) => () => {
+    navigation.navigate(screenName, {data});
+  };
+
   const [state, setState] = useState({
     timer: 100,
     otp: '',
@@ -123,7 +128,7 @@ export default function OtpVerification({navigation}) {
 
 
 <GradientButton
-          onPress={onVerifyOtp}
+           onPress={moveToNewScreen(navigationStrings.EMAIL)}
           containerStyle={{marginTop: moderateScaleVertical(10)}}
           btnText={strings.VERIFY_ACCOUNT}
         />
@@ -162,83 +167,5 @@ export default function OtpVerification({navigation}) {
       </View>
 
   </>
-    // <>
-    // <View>
-
-    // </View>
-    // <WrapperContainer>
-    //   <View style={styles.backContainer}>
-    //     <TouchableOpacity
-    //       onPress={() => navigation.goBack(null)}
-    //       style={{alignSelf: 'flex-start'}}>
-    //       <Image source={imagePath.back} />
-    //     </TouchableOpacity>
-    //   </View>
-    //   <View
-    //     style={{
-    //       flex: 1,
-    //       marginTop: moderateScaleVertical(88),
-    //       marginHorizontal: moderateScale(24),
-    //     }}>
-    //     <Text style={styles.header}>{strings.OTP_VERIFICATION}</Text>
-    //     <Text style={styles.txtSmall}>{strings.ENTER_OTP_SENT}</Text>
-    //     <View style={{height: moderateScaleVertical(50)}} />
-    //     <CodeField
-    //       ref={ref}
-    //       {...propsOtp}
-    //       value={state.otp}
-    //       onChangeText={onChangeOtp}
-    //       cellCount={CELL_COUNT}
-    //       rootStyle={styles.root}
-    //       blurOnSubmit
-    //       keyboardType="number-pad"
-    //       textContentType="oneTimeCode"
-    //       selectionColor={colors.themeColor}
-    //       renderCell={({index, symbol, isFocused}) => (
-    //         <Text
-    //           key={index}
-    //           style={[styles.cell, isFocused && styles.focusCell]}
-    //           onLayout={getCellOnLayoutHandler(index)}>
-    //           {symbol || (isFocused ? <Cursor /> : null)}
-    //         </Text>
-    //       )}
-    //     />
-    //     <GradientButton
-    //       onPress={onVerifyOtp}
-    //       containerStyle={{marginTop: moderateScaleVertical(10)}}
-    //       btnText={strings.VERIFY_ACCOUNT}
-    //     />
-    //     {timer > 0 ? (
-    //       <View style={styles.bottomContainer}>
-    //         <Text style={{...styles.txtSmall, color: colors.textGreyLight}}>
-    //           {strings.RESEND_CODE_IN}
-    //           <Text
-    //             style={{
-    //               color: colors.themeColor,
-    //               fontFamily: fontFamily.futuraBtHeavy,
-    //             }}>
-    //             {`${otpTimerCounter(timer)} min`}
-    //           </Text>
-    //         </Text>
-    //       </View>
-    //     ) : (
-    //       <View style={styles.bottomContainer}>
-    //         <Text style={{...styles.txtSmall, color: colors.textGreyLight}}>
-    //           {strings.DIDNT_GET_OTP}
-    //           <Text
-    //             onPress={_onResend}
-    //             style={{
-    //               color: colors.themeColor,
-    //               fontFamily: fontFamily.futuraBtHeavy,
-    //             }}>
-    //             {' '}
-    //             {strings.RESEND_CODE}
-    //           </Text>
-    //         </Text>
-    //       </View>
-    //     )}
-    //   </View>
-    // </WrapperContainer>
-    // </>
   );
 }

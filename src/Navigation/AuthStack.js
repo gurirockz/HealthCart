@@ -1,5 +1,5 @@
 import React from 'react';
-import {Login, OtpVerification, OuterScreen, Signup, LandingPage} from '../Screens';
+import {Login, OtpVerification, OuterScreen, Signup, LandingPage, Email} from '../Screens';
 import navigationStrings from '../constants/navigationStrings';
 
 
@@ -29,6 +29,12 @@ export default function (Stack) {
       <Stack.Screen
         name={navigationStrings.OTP_VERIFICATION}
         component={OtpVerification}
+        options={{headerShown: false}}
+      />
+
+<Stack.Screen
+        name={navigationStrings.EMAIL}
+        component={Email}
         options={{headerShown: false}}
       />
 
