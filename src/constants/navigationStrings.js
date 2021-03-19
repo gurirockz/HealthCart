@@ -16,4 +16,5 @@ export default {
   PRODUCT_LIST: 'productList',
   LANDING_PAGE: 'landingPage',
   EMAIL: 'email',
+  // SHOPPING_CART: 'shoppingCart',
 };

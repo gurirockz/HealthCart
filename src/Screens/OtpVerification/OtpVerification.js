@@ -7,10 +7,7 @@ import {
   useBlurOnFulfill,
   useClearByFocusCell,
 } from 'react-native-confirmation-code-field';
-import BorderTextInput from '../../Components/BorderTextInput';
-import ButtonWithLoader from '../../Components/ButtonWithLoader';
 import GradientButton from '../../Components/GradientButton';
-import WrapperContainer from '../../Components/WrapperContainer';
 import strings from '../../constants/lang';
 import {
   moderateScaleVertical,

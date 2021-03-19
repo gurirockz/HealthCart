@@ -1,5 +1,5 @@
 import React from 'react';
-import {Login, OtpVerification, OuterScreen, Signup, LandingPage, Email} from '../Screens';
+import {Login, OtpVerification, OuterScreen, Signup, LandingPage, Email, } from '../Screens';
 import navigationStrings from '../constants/navigationStrings';
 
 
@@ -37,6 +37,12 @@ export default function (Stack) {
         component={Email}
         options={{headerShown: false}}
       />
+
+{/* <Stack.Screen
+        name={navigationStrings.SHOPPING_CART}
+        component={ShoppingCart}
+        options={{headerShown: false}}
+      /> */}
 
     </>
   );
