@@ -1,10 +1,5 @@
 import {StyleSheet} from 'react-native';
 
-import {
-  textScale,
-  moderateScale,
-  moderateScaleVertical,
-} from './responsiveSize';
 import colors from './colors';
 import fontFamily from './fontFamily';
 export const hitSlopProp = {
@@ -23,49 +18,45 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  mediumFont14:{
-    fontSize:textScale(14),
-    color:colors.textGrey,
-    fontFamily:fontFamily.medium,
-    opacity:.7
-
+  mediumFont14: {
+    fontSize: 14,
+    color: colors.textGrey,
+    fontFamily: fontFamily.medium,
+    opacity: 0.7,
   },
-  mediumFont14Normal:{
-    fontSize:textScale(14),
-    color:colors.textGrey,
-    fontFamily:fontFamily.medium,
-    opacity:1
+  mediumFont14Normal: {
+    fontSize: 14,
+    color: colors.textGrey,
+    fontFamily: fontFamily.medium,
+    opacity: 1,
   },
-  mediumFont16:{
-    fontSize:textScale(14),
-    color:colors.textGrey,
-    fontFamily:fontFamily.medium,
+  mediumFont16: {
+    fontSize: 14,
+    color: colors.textGrey,
+    fontFamily: fontFamily.medium,
   },
-  futuraBtHeavyFont16:{
-    fontSize:textScale(16),
-    color:colors.black,
-    fontFamily:fontFamily.futuraBtHeavy
-    
+  futuraBtHeavyFont16: {
+    fontSize: 16,
+    color: colors.black,
+    fontFamily: fontFamily.futuraBtHeavy,
   },
-  futuraBtHeavyFont14:{
-    fontSize:textScale(14),
-    color:colors.black,
-    fontFamily:fontFamily.futuraBtHeavy
-    
+  futuraBtHeavyFont14: {
+    fontSize: 14,
+    color: colors.black,
+    fontFamily: fontFamily.futuraBtHeavy,
   },
-  futuraHeavyBt:{
-    fontSize:textScale(16),
-    color:colors.black,
-    fontFamily:fontFamily.futuraHeavyBt
+  futuraHeavyBt: {
+    fontSize: 16,
+    color: colors.black,
+    fontFamily: fontFamily.futuraHeavyBt,
   },
   buttonRect: {
-    height: moderateScaleVertical(46),
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.themeColor,
     borderWidth: 1,
     borderColor: colors.themeColor,
-    borderRadius:4,
+    borderRadius: 4,
   },
   shadowStyle: {
     backgroundColor: colors.white,
@@ -82,10 +73,10 @@ export default StyleSheet.create({
     fontFamily: fontFamily.futuraBtHeavy,
     textTransform: 'uppercase',
     color: colors.white,
-    textAlign:"center"
+    textAlign: 'center',
   },
-  imgOverlay:{
+  imgOverlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor:'rgba(0,0,0,0.3)'
-  }
+    backgroundColor: 'rgba(0,0,0,0.3)',
+  },
 });

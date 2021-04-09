@@ -1,49 +1,90 @@
-import React from 'react';
-import {Login, OtpVerification, OuterScreen, Signup, LandingPage, Email, } from '../Screens';
+import React, {Fragment} from 'react';
+import {Button, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import {
+  Login,
+  Signup,
+  LandingPage,
+  MainPage,
+  OtpVerification,
+  OtpConfirmation,
+  LoginMedi,
+} from '../Screen';
 import navigationStrings from '../constants/navigationStrings';
+import TabRoutes from './TabRoutes';
+import Details from '../Screen/Details/Details';
+import Confirmedorder from '../Screen/ConfirmedOrder/Confirmedorder';
 
+const Stack = createStackNavigator();
 
-export default function (Stack) {
+export default function AuthStack() {
   return (
-    <>
-    <Stack.Screen
-        name={navigationStrings.LANDING_PAGE}
+    <Fragment>
+      <Stack.Screen
         component={LandingPage}
-        options={{headerShown: false}}
+        options={{
+          headerShown: false,
+        }}
+        name={navigationStrings.LANDING_PAGE}
       />
-      <Stack.Screen
-        name={navigationStrings.OUTER_SCREEN}
-        component={OuterScreen}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name={navigationStrings.SIGN_UP}
-        component={Signup}
-        options={{headerShown: false}}
-      />
+
       <Stack.Screen
         name={navigationStrings.LOGIN}
+        options={{
+          headerShown: false,
+        }}
         component={Login}
-        options={{headerShown: false}}
       />
+
       <Stack.Screen
         name={navigationStrings.OTP_VERIFICATION}
         component={OtpVerification}
         options={{headerShown: false}}
       />
 
-<Stack.Screen
-        name={navigationStrings.EMAIL}
-        component={Email}
+      <Stack.Screen
+        name={navigationStrings.OTP_CONFIRMATION}
+        component={OtpConfirmation}
         options={{headerShown: false}}
       />
 
-{/* <Stack.Screen
-        name={navigationStrings.SHOPPING_CART}
-        component={ShoppingCart}
+      <Stack.Screen
+        name={navigationStrings.LOGIN_MEDI}
+        component={LoginMedi}
         options={{headerShown: false}}
-      /> */}
+      />
 
-    </>
+      <Stack.Screen
+        name={navigationStrings.SIGNUP}
+        options={{
+          headerShown: false,
+        }}
+        component={Signup}
+      />
+
+      <Stack.Screen
+        name={navigationStrings.CONFIRMED_ORDER}
+        options={{
+          headerShown: false,
+        }}
+        component={Confirmedorder}
+      />
+
+      <Stack.Screen
+        name="Details"
+        options={{
+          headerShown: false,
+        }}
+        component={Details}
+      />
+      <Stack.Screen
+        name={navigationStrings.TAB_ROUTES}
+        options={{
+          headerShown: false,
+        }}
+        component={TabRoutes}
+      />
+    </Fragment>
   );
 }

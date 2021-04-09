@@ -1,26 +1,21 @@
-import types from "../types";
+import {clearUserData} from '../../utils/utils';
+import actionTypes from '../types';
 
-const initial_state = {
-    userData: {},
-    internetConnection: false
+const initialState = {
+  userData: {},
+  isLoggedin: false,
+};
+export default function counterReducer(state = initialState, action) {
+  switch (action.type) {
+    case actionTypes.login:
+      const {userData} = {...action.payload};
+      return {...state, userData, isLoggedin: true};
 
-}
-
-export default function (state = initial_state, action) {
-
-    switch (action.type) {
-        case types.LOGIN: {
-            const data = action.payload
-            return { userData: data };
-        }
-
-        case types.NO_INTERNET: {
-            const internetConnection = action.payload.internetConnection
-            return { ...state, internetConnection }
-        }
-
-        default: {
-            return { ...state }
-        }
+    case actionTypes.logout:
+      clearUserData();
+      return {...state, isLoggedin: false, userData: {}};
+    default: {
+      return {...state};
     }
+  }
 }

@@ -5,3 +5,4 @@ const middlewares = [thunk];
 
 
 export default createStore(reducer, applyMiddleware(...middlewares))
+

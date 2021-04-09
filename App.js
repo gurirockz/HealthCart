@@ -1,47 +1,36 @@
-
-import React, { useEffect } from 'react';
-// import SplashScreen from 'react-native-splash-screen'
-import { Provider } from 'react-redux';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import FlashMessage from 'react-native-flash-message';
+//import liraries
+import React, {Component} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 import Routes from './src/Navigation/Routes';
+import {getUserData} from './src/utils/utils';
 import store from './src/redux/store';
-import { getUserData } from './src/utils/utils';
 import types from './src/redux/types';
+import {Connect, Provider} from 'react-redux';
+import SplashScreen from 'react-native-splash-screen';
 
+const {dispatch} = store;
 
-const App = () => {
-  useEffect(() => {
-    (async () => {
-      const userData = await getUserData();
-      console.log("user data", userData)
-      const { dispatch } = store;
-      if (userData && !!userData.token) {
-        console.log("enter")
+class MyClass extends Component {
+  componentDidMount() {
+    // getFCMToken();
+    getUserData().then(userData => {
+      if (userData) {
         dispatch({
-          type: types.LOGIN,
+          type: types.ISLOGIN,
           payload: userData,
         });
-
+        setTimeout(() => SplashScreen.hide());
       }
-      // setTimeout(()=>{
-      //   SplashScreen.hide();
-      // },600)
-      
-    })();
+    });
+  }
 
-    return () => { };
-  }, []);
-
-  return (
-    <SafeAreaProvider>
+  render() {
+    return (
       <Provider store={store}>
         <Routes />
       </Provider>
-      <FlashMessage position="top" />
-    </SafeAreaProvider>
-  );
-};
+    );
+  }
+}
 
-
-export default App;
+export default MyClass;

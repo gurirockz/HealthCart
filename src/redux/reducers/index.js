@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import auth from "./auth";
-import appTheme from "./appTheme";
+import home from "./home";
 import types from '../types';
 
 
 
 const appReducer = combineReducers({
     auth,
-    appTheme
+    home
 
 });
 

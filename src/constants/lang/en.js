@@ -10,10 +10,9 @@ export default {
     ENTER_DETAILS_BELOW:"Enter details below to create new account.",
     YOUR_NAME:"Your name *",
     YOUR_EMAIL:"Your email *",
-    YOUR_PHONE_NUMBER:"Enter Mobile Number",
-    MOBILE_NUMBER: "Enter Mobile Number",
-    MOBILE_CODE: "+91",
+    YOUR_PHONE_NUMBER:"Your phone no *",
     ENTER_PASSWORD:"Enter password",
+    ENTER_MOBILE_NO:"Enter Mobile Number" ,
     SIGNUP_AN_ACCOUNT:"SIGN UP ACCOUNT",
     OTP_VERIFICATION:"OTP Verification",
     ENTER_OTP_SENT:"Enter the OTP sent to your registered email and phone number",
@@ -27,6 +26,9 @@ export default {
     LOGIN_ACCOUNT:"LOGIN ACCOUNT",
     DID_NOT_HAVE_AN_ACCOUNT:`Didn't have an account?`,
     SIGN_UP:'Signup',
+    INSURANCE_CORPORATE:"I have an Insurance or Corporate Account" ,
+    TERMS:"By continuing you are agreeing to " ,
+    TERMS_CONDITIONS: "Terms and conditions" ,
     WHAT_WOULD_YOU_LIKE_TO_DO:"What would you like to do?",
     SEND_SOMETHING:"Send something.",
     WE_WILL_PICK:"We’ll pick up and drop off your item",
@@ -43,7 +45,11 @@ export default {
     ABOUT_US:"About Us",
     SHARE_APP:"Share app",
     PAYMENTS:"Payments",
-    CONTACT_US:"Contact us"
+    CONTACT_US:"Contact us" ,
+    INDIAN_CODE:"+91" ,
+    OTP:'Enter OTP' 
+    
+    
 
 
 

@@ -1,20 +1,17 @@
 export default {
-  LOGIN: 'login',
-  OTP_VERIFICATION: 'otpVerfication',
-  OUTER_SCREEN: 'outerScreen',
-  SIGN_UP: 'signUp',
-  HOME: 'home',
-  OFFERS: 'offers',
-  BRANDS: 'brands',
-  CELEBRITY: 'celebrity',
-  ACCOUNTS: 'accounts',
-  TAB_ROUTES: 'tabRoutes',
-  DELIVERY: 'delivery',
-  RESTAURANT: 'restaurent',
-  SUPERMARKET: 'supermarket',
-  SUPERMARKET_PRODUCTS_CATEGORY: 'supermarketProductsCategory',
-  PRODUCT_LIST: 'productList',
-  LANDING_PAGE: 'landingPage',
-  EMAIL: 'email',
-  // SHOPPING_CART: 'shoppingCart',
-};
+    
+    TAB_ROUTES:'tabRoutes',
+    LOGIN:'login',
+    OTP_VERIFICATION: 'otpVerification' ,
+    SIGNUP:'signup',
+    HOME:'home',
+    SUPERCOINS:'superCoins',
+    VIDEO:'video',
+    GAME_ZONE:'gameZone',
+    LANDING_PAGE:'landingPage',
+    MAIN_PAGE:'mainPage' ,
+    CONFIRMED_ORDER:'confirm' ,
+    OTP_CONFIRMATION: 'otpConfirmation' ,
+    LOGIN_MEDI: 'loginform'
+    
+}

@@ -1,8 +1,7 @@
 export default {
   LOGIN: 'LOGIN',
-  FORGET_PASSWORD: 'FORGET_PASSWORD',
   CLEAR_REDUX_STATE: 'CLEAR_REDUX_STATE',
-  APP_DATA: 'APP_DATA',
-  NO_INTERNET: "NO_INTERNET",
-  UPDATE_LOC:'UPDATE_LOC'
+  ISLOGIN:'isloogedin' ,
+  ADD_TO_CART:'addtocart' ,
+  PRODUCT_DETAILS:'productdetails'
 };
