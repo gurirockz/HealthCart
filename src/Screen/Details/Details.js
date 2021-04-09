@@ -181,7 +181,7 @@ class Details extends Component {
               style={styles.cartView}>
               <AntDesign name="shoppingcart" size={25} color={colors.white} />
 
-              <Text style={styles.textWhite}> Add To Cart</Text>
+              <Text style={styles.textWhite}> {item.Add_To_Cart}</Text>
             </View>
           </TouchableOpacity>
         </View>
